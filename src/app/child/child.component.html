@@ -1,0 +1,13 @@
+<div class="product-list">  
+  <div *ngFor="let product of Products; let i = index" class="product-item">  
+    <div class="product-name">  
+      {{ product.name }}  
+    </div>  
+    <div class="product-price">  
+      {{ product.price }}  
+    </div>  
+    <button type="button" class="delete-btn" (click)="deleteProduct(i)">  
+      Delete  
+    </button>  
+  </div>  
+</div>

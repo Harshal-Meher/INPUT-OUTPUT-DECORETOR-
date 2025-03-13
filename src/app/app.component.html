@@ -1,0 +1,16 @@
+<div class="product-container">  
+  <div class="input-section">  
+    <input type="text" #productName name="name" placeholder="Product Name">  
+    <input type="number" #productPrice name="price" placeholder="Product Price">  
+    <button type="button" (click)="addProduct(productName.value, productPrice.value)">  
+      Add Product  
+    </button>  
+  </div>  
+
+  <app-child  
+    [Products]="Products"  
+    (remove)="deleteProduct($event)">  
+  </app-child>  
+</div>
+
+
